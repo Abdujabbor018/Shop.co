@@ -5,6 +5,7 @@ import './App.css'
 import Products from './Components/Products/Products'
 import Styles from './Components/Styles/Styles'
 import Comments from './Components/Comments/Comments'
+import Contact from './Components/Contact/Contact'
 const App = () => {
   return (
   <>
@@ -13,6 +14,7 @@ const App = () => {
     <Products />
     <Styles />
     <Comments />
+    <Contact />
   </>
   )
 }
