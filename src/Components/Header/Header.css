@@ -1,0 +1,111 @@
+
+
+.navbar {
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: white;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.navbar-list {
+  display: flex;
+  gap: 25px;
+}
+
+.navbar-link {
+  color: #000;
+  font-weight: 500;
+}
+
+.navbar-items {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar-search {
+  width: 380px;
+  padding: 15px 15px;
+  border-radius: 20px;
+  border: none;
+  background: #f3f3f3;
+  outline: none;
+}
+
+.basket-btn {
+  width: 35px;
+  height: 35px;
+  background: url("https://cdn-icons-png.flaticon.com/512/263/263142.png")
+    center/contain no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+
+.header {
+background: #F5F5F5;
+  padding: 60px 0;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between !important;
+}
+
+
+.header-text {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.header-info {
+  margin: 20px 0;
+  color: #555;
+}
+
+.header-btn {
+  padding: 20px 60px;
+  background: black;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.header-btn::after {
+  content: "Shop Now";
+}
+
+.header-cards {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.header-card-number {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.header-card-info {
+  color: #666;
+  font-size: 14px;
+}
+
+.header-img {
+  max-width: 500px;
+}

@@ -1,0 +1,95 @@
+.comments {
+  padding: 80px 0;
+  background-color: #fff;
+  position: relative;
+}
+
+.comments-title {
+  font-family: 'Integral CF', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  text-align: center; /* Sarlavhani markazga olish */
+  margin-bottom: 60px;
+  text-transform: uppercase;
+}
+
+.slider-wrapper {
+  display: flex;
+  align-items: center; /* Tugmalarni slider bilan bir xil balandlikka qo'yish */
+  gap: 20px;
+  position: relative;
+}
+
+.comments-swiper {
+  width: 100%;
+  padding: 10px 0;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  font-size: 40px; /* Kattaroq strelkalar */
+  cursor: pointer;
+  color: #000;
+  transition: 0.3s;
+  z-index: 10;
+  padding: 0 10px;
+}
+
+.nav-btn:hover {
+  opacity: 0.5;
+  transform: scale(1.1);
+}
+
+.comment-card {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 28px;
+  height: 240px;
+  background-color: #fff;
+}
+
+.stars {
+  color: #FFC633;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.user-name {
+  font-weight: 700;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.check-icon {
+  background-color: #01AB31;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comment-text {
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Telefonlar uchun moslashuv */
+@media (max-width: 768px) {
+  .comments-title {
+    font-size: 30px;
+  }
+  .nav-btn {
+    font-size: 30px;
+  }
+  .slider-wrapper {
+    gap: 5px;
+  }
+}
