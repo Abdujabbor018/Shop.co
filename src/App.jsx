@@ -6,6 +6,7 @@ import Products from './Components/Products/Products'
 import Styles from './Components/Styles/Styles'
 import Comments from './Components/Comments/Comments'
 import Contact from './Components/Contact/Contact'
+import Footer from './Components/Footer/Footer'
 const App = () => {
   return (
   <>
@@ -15,6 +16,7 @@ const App = () => {
     <Styles />
     <Comments />
     <Contact />
+    <Footer />
   </>
   )
 }

@@ -32,6 +32,11 @@
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.image-box img:hover{
+    transform: scale(1.07);
 }
 
 .product-title {
@@ -65,6 +70,6 @@
     font-size: 14px;
 }
 
-/* Planhet va Mobil uchun */
+
 @media (max-width: 1024px) { .products-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .products-grid { grid-template-columns: 1fr; } }

@@ -1,15 +1,43 @@
-.brands{
-    background-color: black;
-     padding: 35px 0;
+.brands {
+  background-color: black;
+  padding: 40px 0;
 }
-.brands-container{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 20px;
+
+.brands-container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  flex-wrap: wrap; 
+  gap: 30px;
 }
-.brands img {
-  height: 28px;
-  filter: brightness(0) invert(1);
-  opacity: 0.9;
+
+.brands-container a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.brands-container img {
+  height: 32px; 
+  width: auto;
+  filter: brightness(0) invert(1); 
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.brands-container img:hover {
+  opacity: 1; 
+}
+
+
+@media (max-width: 768px) {
+  .brands-container {
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .brands-container img {
+    height: 24px;
+  }
 }
