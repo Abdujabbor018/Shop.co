@@ -1,0 +1,131 @@
+/* Asosiy konteyner */
+.pd-wrapper {
+    padding: 40px 0;
+}
+
+.pd-breadcrumb {
+    margin-bottom: 24px;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+}
+
+.pd-main-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Rasm qismi */
+.pd-image-section {
+    flex: 1;
+    background-color: #F0EEED;
+    border-radius: 20px;
+    padding: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 530px; /* Asosiy sahifadagidan kattaroq */
+}
+
+.pd-image-section img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Ma'lumotlar qismi */
+.pd-info-section {
+    flex: 1;
+}
+
+.pd-title-text {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin: 0 0 15px 0;
+}
+
+.pd-rating-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.pd-price-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.pd-current-price {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.pd-old-price-text {
+    font-size: 32px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.3);
+    text-decoration: line-through;
+}
+
+.pd-discount-label {
+    background-color: rgba(255, 51, 51, 0.1);
+    color: #FF3333;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.pd-desc {
+    color: rgba(0, 0, 0, 0.6);
+    line-height: 1.6;
+    font-size: 16px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 30px;
+}
+
+/* Tugmalar va selectorlar */
+.pd-actions {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.pd-qty-selector {
+    display: flex;
+    align-items: center;
+    background-color: #F0F0F0;
+    border-radius: 50px;
+    padding: 12px 25px;
+    gap: 30px;
+}
+
+.pd-add-btn {
+    flex: 1;
+    padding: 16px;
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.pd-status-added {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border-radius: 50px;
+    font-weight: 600;
+}
