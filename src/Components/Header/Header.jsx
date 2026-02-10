@@ -77,7 +77,7 @@ const Header = () => {
                   designed to bring out your individuality and cater to your sense of style.
                 </p>
 
-                <button className="header-btn">Shop Now</button>
+                <button className="header-btn"></button>
 
                 <div className="header-cards">
                   <div className="header-card">
