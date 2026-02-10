@@ -73,3 +73,21 @@
 
 @media (max-width: 1024px) { .products-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .products-grid { grid-template-columns: 1fr; } }
+
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+}
+
+
+.product-card-link {
+    text-decoration: none !important;
+    color: inherit !important;
+    display: contents; 
+}
+
+.product-card {
+    cursor: pointer;
+}

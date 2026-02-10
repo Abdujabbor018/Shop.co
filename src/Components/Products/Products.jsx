@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom' // Yo'naltirish uchun Link komponentini chaqiramiz
 import cardData from '../../data'
 import './Products.css' 
 
@@ -18,18 +19,23 @@ const Products = () => {
                             {data
                                 .filter(item => item.category === cat)
                                 .map(product => (
-                                    <div className="product-card" key={product.id}>
-                                        <div className="image-box">
-                                            <img src={product.image} alt={product.title} />
+                                    /* Har bir cardni Link bilan o'raymiz. 
+                                       'to' atributi App.jsx dagi /product/:id yo'liga mos kelishi kerak 
+                                    */
+                                    <Link to={`/product/${product.id}`} key={product.id} className="product-card-link">
+                                        <div className="product-card">
+                                            <div className="image-box">
+                                                <img src={product.image} alt={product.title} />
+                                            </div>
+                                            <h3 className="product-title">{product.title}</h3>
+                                            <p className="rating-stars">★ {product.rating}</p>
+                                            <div className="price-row">
+                                                <span className="new-price">${product.price}</span>
+                                                <span className="old-price">${product.sale}</span>
+                                                <span className="discount-tag">-{product.percent}%</span>
+                                            </div>
                                         </div>
-                                        <h3 className="product-title">{product.title}</h3>
-                                        <p className="rating-stars">★ {product.rating}</p>
-                                        <div className="price-row">
-                                            <span className="new-price">${product.price}</span>
-                                            <span className="old-price">${product.sale}</span>
-                                            <span className="discount-tag">-{product.percent}%</span>
-                                        </div>
-                                    </div>
+                                    </Link>
                                 ))}
                         </div>
                     </div>
