@@ -82,7 +82,6 @@ const Cart = () => {
                         <span className="bold">${subtotal.toFixed(2)}</span>
                     </div>
 
-                    {/* Chegirma faqat promokod ishlatilsa ko'rinadi */}
                     {discountPercent > 0 && (
                         <div className="summary-row discount">
                             <span>Discount (-{(discountPercent * 100)}%)</span>

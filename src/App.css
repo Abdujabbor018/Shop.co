@@ -10,14 +10,10 @@
   max-width: 1200px;
   margin: 0 auto;
 }
-/* ============================================================
-   FINAL RESPONSIVE DESIGN (Navbar, Header, Products, Cart)
-   ============================================================ */
 
-/* 1. Planshetlar uchun (1024px va undan kichik) */
 @media (max-width: 1024px) {
     .navbar-search {
-        width: 250px; /* Qidiruv maydonini biroz qisqartiramiz */
+        width: 250px;
     }
 
     .header-text {
@@ -33,15 +29,15 @@
     }
 }
 
-/* 2. Kichik planshetlar uchun (768px va undan kichik) */
+
 @media (max-width: 768px) {
     /* Navbar */
     .navbar-list {
-        display: none; /* Menyu yashiriladi (burger menyu uchun joy) */
+        display: none;
     }
 
     .navbar-search {
-        display: none; /* Telefonda qidiruv maydoni odatda ikonka ichiga yashiriladi */
+        display: none; 
     }
 
     /* Header (Hero) */
@@ -64,7 +60,6 @@
         margin-top: 40px;
     }
 
-    /* Cart & Detail */
     .cart-content, .pd-main-content {
         flex-direction: column;
     }
@@ -79,7 +74,6 @@
     }
 }
 
-/* 3. Mobil qurilmalar uchun (480px va undan kichik) */
 @media (max-width: 480px) {
     .navbar {
         padding: 15px 0;
@@ -89,7 +83,7 @@
         font-size: 22px;
     }
 
-    /* Header */
+
     .header {
         padding: 40px 0;
     }
@@ -109,10 +103,9 @@
     }
 
     .header-card {
-        flex: 1 1 40%; /* Kartochkalar 2 tadan joylashadi */
+        flex: 1 1 40%; 
     }
 
-    /* Mahsulotlar */
     .products-grid {
         grid-template-columns: 1fr;
     }
@@ -121,7 +114,6 @@
         height: 250px;
     }
 
-    /* Cart Item */
     .cart-item {
         flex-direction: column;
         gap: 15px;
@@ -138,7 +130,7 @@
         justify-content: space-between;
     }
 
-    /* Promo Kod */
+
     .promo-code {
         flex-direction: column;
     }

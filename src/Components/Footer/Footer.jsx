@@ -15,7 +15,7 @@ const Footer = () => {
             </p>
             <div className="social-icons">
               <a href="#" className="social-icon"><FaTwitter /></a>
-              <a href="#" className="social-icon active"><FaFacebookF /></a>
+              <a href="#" className="social-icon"><FaFacebookF /></a>
               <a href="#" className="social-icon"><FaInstagram /></a>
             </div>
           </div>
