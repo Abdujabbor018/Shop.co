@@ -1,15 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react'; // useState qo'shildi
 import { useCart } from './CartContext';
-import './Cart.css'; // Stillarni alohida faylga chiqaramiz
+import './Cart.css';
 
 const Cart = () => {
     const { cartItems, updateQuantity, removeFromCart } = useCart();
+    
+    // Promokod uchun holatlar (state)
+    const [promoInput, setPromoInput] = useState('');
+    const [discountPercent, setDiscountPercent] = useState(0); 
 
     // Hisob-kitoblar
     const subtotal = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
-    const discount = subtotal * 0.2; // 20% chegirma (ixtiyoriy)
-    const deliveryFee = subtotal > 0 ? 15 : 0; // Yetkazib berish
-    const total = subtotal - discount + deliveryFee;
+    
+    // Promokodni tekshirish funksiyasi
+    const handleApplyPromo = () => {
+        if (promoInput === 'Islomaka') {
+            setDiscountPercent(0.5); 
+            alert("Hurmatli Islomaka! Sizga 50% chegirma berildi! 🚀");
+        } else if (promoInput.toUpperCase() === 'DISCOUNT20') {
+            setDiscountPercent(0.2); 
+            alert("20% chegirma muvaffaqiyatli qo'shildi.");
+            
+        } 
+        else {
+            setDiscountPercent(0);
+            alert("Bunday promokod mavjud emas!");
+        }
+    };
+
+    const discountAmount = subtotal * discountPercent;
+    const deliveryFee = subtotal > 0 ? 15 : 0;
+    const total = subtotal - discountAmount + deliveryFee;
 
     return (
         <div className="container cart-page">
@@ -20,10 +41,9 @@ const Cart = () => {
             <h2 className="cart-main-title">YOUR CART</h2>
 
             <div className="cart-content">
-                {/* Savatdagi mahsulotlar ro'yxati */}
                 <div className="cart-items-list">
                     {cartItems.length === 0 ? (
-                        <div className="empty-cart">
+                        <div className="empty-cart" style={{textAlign: 'center', padding: '40px'}}>
                             <p>Savatda mahsulotlar yo'q.</p>
                         </div>
                     ) : (
@@ -55,17 +75,21 @@ const Cart = () => {
                     )}
                 </div>
 
-                {/* Buyurtma hisobi (Order Summary) */}
                 <div className="order-summary">
                     <h3>Order Summary</h3>
                     <div className="summary-row">
                         <span>Subtotal</span>
                         <span className="bold">${subtotal.toFixed(2)}</span>
                     </div>
-                    <div className="summary-row discount">
-                        <span>Discount (-20%)</span>
-                        <span className="bold red">-${discount.toFixed(2)}</span>
-                    </div>
+
+                    {/* Chegirma faqat promokod ishlatilsa ko'rinadi */}
+                    {discountPercent > 0 && (
+                        <div className="summary-row discount">
+                            <span>Discount (-{(discountPercent * 100)}%)</span>
+                            <span className="bold red">-${discountAmount.toFixed(2)}</span>
+                        </div>
+                    )}
+
                     <div className="summary-row">
                         <span>Delivery Fee</span>
                         <span className="bold">${deliveryFee.toFixed(2)}</span>
@@ -77,8 +101,16 @@ const Cart = () => {
                     </div>
                     
                     <div className="promo-code">
-                        <input type="text" placeholder="Add promo code" />
-                        <button>Apply</button>
+                        <input 
+                            type="text" 
+                            placeholder="Add promo code" 
+                            value={promoInput}
+                            onChange={(e) => setPromoInput(e.target.value)}
+                            style={{
+                                border: discountPercent === 0.5 ? '2px solid #2e7d32' : 'none'
+                            }}
+                        />
+                        <button onClick={handleApplyPromo}>Apply</button>
                     </div>
 
                     <button className="checkout-btn">
@@ -90,4 +122,4 @@ const Cart = () => {
     );
 };
 
-export default Cart;
+export default Cart;    

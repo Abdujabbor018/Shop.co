@@ -10,7 +10,7 @@ const Products = () => {
     const categories = ["MEN'S CLOTHING", "JEWELERY", "ELECTRONICS", "WOMEN'S CLOTHING"]
 
     return (
-        <div className="products-page">
+        <div className="products-page" id='Products'>
             <div className="container">
                 {categories.map((cat) => (
                     <div key={cat} className="category-section">
@@ -19,9 +19,7 @@ const Products = () => {
                             {data
                                 .filter(item => item.category === cat)
                                 .map(product => (
-                                    /* Har bir cardni Link bilan o'raymiz. 
-                                       'to' atributi App.jsx dagi /product/:id yo'liga mos kelishi kerak 
-                                    */
+                                    
                                     <Link to={`/product/${product.id}`} key={product.id} className="product-card-link">
                                         <div className="product-card">
                                             <div className="image-box">

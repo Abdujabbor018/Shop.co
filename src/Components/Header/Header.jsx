@@ -22,8 +22,8 @@ const Header = () => {
             </Link>
 
             <ul className="navbar-list">
-              <li className="navbar-item"><Link to="/shop" className="navbar-link">Shop</Link></li>
-              <li className="navbar-item"><Link to="/sale" className="navbar-link">On Sale</Link></li>
+              <li className="navbar-item"><Link to="/cart" className="navbar-link">Shop</Link></li>
+              <li className="navbar-item"><Link to="#Products" className="navbar-link">On Sale</Link></li>
               <li className="navbar-item"><Link to="/new" className="navbar-link">New Arrivals</Link></li>
               <li className="navbar-item"><Link to="/brand" className="navbar-link">Brand</Link></li>
             </ul>
@@ -58,7 +58,7 @@ const Header = () => {
               <div className="header-texts">
                 <h1 className="header-text">FIND CLOTHES <br /> THAT MATCHES <br /> YOUR STYLE</h1>
                 <p className="header-info">Browse through our diverse range of meticulously crafted garments...</p>
-                <button className="header-btn">Shop Now</button>
+                <button className="header-btn"></button>
                 <div className="header-cards">
                   <div className="header-card"><h4>200+</h4><p>International Brands</p></div>
                   <div className="header-card"><h4>2,000+</h4><p>High-Quality Products</p></div>
