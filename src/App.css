@@ -148,3 +148,12 @@
         border-radius: 25px;
     }
 }
+html, body{
+    scroll-behavior: smooth;
+}
+button:hover{
+transform: scale(1.1);
+}
+button{
+transition: 0.3s ease;
+}

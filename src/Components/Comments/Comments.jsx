@@ -20,7 +20,7 @@ const Comments = () => {
   ];
 
   return (
-    <div className="comments">
+    <div className="comments" id='Comments'>
       <div className="container">
         <h2 className="comments-title">OUR HAPPY CUSTOMERS</h2>
         

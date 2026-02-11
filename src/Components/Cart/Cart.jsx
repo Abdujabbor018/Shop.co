@@ -33,7 +33,7 @@ const Cart = () => {
     const total = subtotal - discountAmount + deliveryFee;
 
     return (
-        <div className="container cart-page">
+        <div className="container cart-page" id='Cart'>
             <div className="cart-breadcrumb">
                 Home {'>'} <span>Cart</span>
             </div>

@@ -7,7 +7,7 @@ import r4 from './img/rasm4.png'
 
 const Styles = () => {
   return (
-    <div className="styles-section">
+    <div className="styles-section" id='Style'>
       <div className="container">
         <div className="styles-box">
           <h2 className="styles-title">BROWSE BY DRESS STYLE</h2>

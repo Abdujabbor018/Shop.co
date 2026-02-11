@@ -23,9 +23,9 @@ const Header = () => {
 
             <ul className="navbar-list">
               <li className="navbar-item"><Link to="/cart" className="navbar-link">Shop</Link></li>
-              <li className="navbar-item"><Link to="#Products" className="navbar-link">On Sale</Link></li>
-              <li className="navbar-item"><Link to="/new" className="navbar-link">New Arrivals</Link></li>
-              <li className="navbar-item"><Link to="/brand" className="navbar-link">Brand</Link></li>
+              <li className="navbar-item"><a href="#Products" className="navbar-link">On Sale</a></li>
+              <li className="navbar-item"><a href="#Comments" className="navbar-link">Comments</a></li>
+              <li className="navbar-item"><a href="#Style" className="navbar-link">Brand</a></li>
             </ul>
 
             <div className="navbar-items" style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
