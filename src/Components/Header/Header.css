@@ -27,6 +27,9 @@
 .navbar-link {
   color: #000;
   font-weight: 500;
+    text-decoration: none;
+  position: relative;
+  transition: all 0.5s;
 }
 
 .navbar-items {
@@ -108,4 +111,10 @@ background: #F5F5F5;
 
 .header-img {
   max-width: 500px;
+}
+
+
+.navbar-link:hover {
+  color: #0D7CFF;
+  text-shadow: 0 0 10px #0D7CFF, 0 0 20px #0D7CFF, 0 0 30px #0D7CFF, 0 0 40px #0D7CFF;
 }
